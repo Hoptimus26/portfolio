@@ -751,6 +751,66 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.5;
 }
 
+/* Certificate Category Cards */
+.cert-category-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem;
+}
+
+.cert-cat-header {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    border-bottom: 1.5px dashed var(--border-color);
+    padding-bottom: 0.8rem;
+}
+
+.cert-cat-title h4 {
+    font-size: 1.35rem;
+    color: var(--primary);
+    margin-bottom: 0.1rem;
+}
+
+.cert-cat-title span {
+    font-family: var(--font-head);
+    font-size: 1.15rem;
+    color: var(--secondary);
+    font-weight: 600;
+}
+
+.cert-sub-list {
+    list-style: none;
+    padding-left: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.cert-sub-list > li {
+    position: relative;
+    padding-left: 1.5rem;
+    font-size: 1.15rem;
+    line-height: 1.35;
+    color: var(--text-main);
+}
+
+.cert-sub-list > li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: var(--secondary);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.cert-meta {
+    display: block;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
 /* Contact */
 .contact-card {
     max-width: 900px;
@@ -832,6 +892,9 @@ h1, h2, h3, h4, h5, h6 {
 .contact-item i {
     color: var(--secondary);
     font-size: 1.8rem;
+    width: 25px;
+    text-align: center;
+    flex-shrink: 0;
 }
 
 .contact-item a, .contact-item span {
@@ -840,6 +903,13 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
     border-bottom: 2px dashed transparent;
     transition: all 0.2s;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+}
+
+.contact-item a {
+    display: inline-block;
+    transform-origin: left center;
 }
 
 .contact-item a:hover {
